@@ -155,9 +155,128 @@ The tests performed brings to the conclusion that the vaccine is not very effect
 
 ## LGBTQ
 
+## Introduction
 
+$H(O)$ : The vaccine is not effective in preventing COVID-19 in LGBTQ.
+
+$H(A)$ : The vaccine is effective in treating COVID-19 in LGBTQ.
+
+The following data is used as a clinical test. The finalized data was provided by Proffessor Brownlow. 
+
+## Methods
+
+The response methods that is used in this is Cat~Cat. Following data is based off from the final data provided. The numerical results, bar chart will be refereed to as well. 
+
+
+##Results
+
+```{r}
+LGBTQdata = filter (FinalData, LGBTQ== "gay")
+```
+
+## Graphical results
+
+```{r}
+barchartGC(~infected+treatment,data=LGBTQdata)
+```
+```{r}
+barchartGC(~infected+treatment, data=,LGBTQdata, type="percent")
+```
+According to the graph, from the LGBTQ who had COVID-19, statistics show that 80% of them who were vaccinated had symptoms of covid and approximately 1 percent of the placebo females had symptoms as well. Graph provides evidence that the ones that did not get covid 19 and were not vaccinated or vaccinated did not show any differentiation. 
+
+## Numerical results
+
+```{r}
+table3 <- xtabs(~infected + treatment, data=LGBTQdata)
+rowPerc(table3)
+```
+
+```{r}
+colPerc(table3)
+```
+The numerical data provides statistics of the LGBTQ  placebo shows they experienced 15.38% of the symptoms, compared to the vaccinated group who experienced 84.62 percent of the symptoms. Data provides evidence that 0.66 percent of the LGBTQ group that had placebo were infected by covid 19, compared to the ones vaccinated is 3.54 percent.
+
+
+## Inferencial results
+
+```{r}
+chisq.test(table3)
+```
+```{r}
+chisqtestGC(table3)
+```
+```{r}
+fisher.test(table3)
+```
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.0000006668.
+
+## Discussion and Conclusion
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.0000006668. This determines that there is an effect between LGBTQ subgroup and covid vaccine. 
+Based on the fisher exact test, the odd ratio is approximately 0.18% , which shows the odds are 0.18 lower in a variable group compared to the other group. This shows a difference between both groups, therefore the null hypothesis is rejected. 
 
 ## Druggies
+
+## Introduction
+
+$H(O)$ : The vaccine is not effective in preventing COVID-19 in druggies.
+
+$H(A)$ : The vaccine is effective in treating COVID-19 in druggies.
+
+The following data is used as a clinical test. The finalized data was provided by Professor Brownlow. 
+
+## Methods
+
+The response methods that is used in this is Cat~Cat. Following data is based off from the final data provided. The numerical results, bar chart will be refereed to as well. 
+
+
+##Results
+
+```{r}
+DrugUserData = filter (FinalData, DrugUser == "yes")
+```
+
+## Graphical results
+
+```{r}
+barchartGC(~infected+treatment,data=DrugUserData)
+```
+```{r}
+barchartGC(~infected+treatment, data=,DrugUserData, type="percent")
+```
+The drup users who got covid 19, approximately 80 percent of the vaccinated experienced symptoms and 15% of placebo group experienced symptoms. There was a little no difference between the drug users group that are vaccinated or not. 
+
+
+## Numerical results
+
+```{r}
+table4 <- xtabs(~infected + treatment, data=DrugUserData)
+rowPerc(table4)
+```
+
+
+```{r}
+colPerc(table4)
+```
+The numerical data provides evidence that 11.67% of the placebo drug user group felt the covid 19 symptoms when they were infected by covid-19. 88.33% of vaccinated drug users experienced symptoms. The data shows that 4% of the drug users were infected with covid 19 and 3.06% vaccinated ones were infected with covid 19.
+
+## Inferencial results
+
+```{r}
+chisq.test(table4)
+```
+
+
+```{r}
+chisqtestGC(table4)
+```
+```{r}
+fisher.test(table4)
+```
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.00000002842 .
+
+## Discussion and Conclusion
+
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.00000002842. The p value from the fisher exact test is 0.000000232, which shows the odd ratio is approximately 0.12 percent. This shows that the odds of this occurring are lower in the one group in comparison to the other group. The 95 percent confidence interval from the fisher exact test supports this. 
 
 
 # Overall Results and Conclusions
