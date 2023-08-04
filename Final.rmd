@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2023"
-author: "Put your name here!"
+author: "Sakana Uthayasegar"
 output: 
   html_document:
     number_sections: true
@@ -24,11 +24,134 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
+$H(O)$ : The vaccine is not effective in preventing the spread of Covid.
+
+$H(A)$ : The vaccine is effective in preventing the spread of Covid.
+
 ## Males
 
 
-## Females
+## Introduction
 
+$H(O)$ : The vaccine is not effective in preventing COVID-19 in males.
+
+$H(A)$ : The vaccine is effective in treating COVID-19 in males.
+
+The following data is used as a clinical test. The finalized data was provided by Proffessor Brownlow. 
+
+## Methods
+
+The response methods that is used in this is Cat~Cat. Following data is based off from the final data provided. The numerical results, bar chart will be refereed to as well. 
+
+
+##Results
+
+```{r}
+maledata = filter (FinalData, sex == "M")
+```
+
+## Graphical results
+
+```{r}
+barchartGC(~infected+treatment,data=maledata)
+```
+Placebo and Vaccine are compared in growth. 
+
+
+```{r}
+barchartGC(~infected+treatment, data=,maledata, type="percent")
+```
+According to the graph, from the males who had COVID-19, statistics show that 30% of them who were vaccinated had symptoms of covid and approximately 70 percent of the placebo males had symptoms as well. Graph provides evidence of the slight difference in males compared between vaccinated and non vaccinated individuals. There was almost no different between them. 
+
+## Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=maledata)
+rowPerc(table1)
+```
+
+```{r}
+colPerc(table1)
+```
+The numerical data provides statistics of the males who took the vaccine and infected by covid-19. The males who took placebo had approximetely 70 percent chance of no infection and 30 percent lesser chance as a male who got the vaccine. There was little to no difference on males felt no symptoms and got the vaccine. 
+
+## Inferencial results
+
+```{r}
+chisq.test(table1)
+```
+```{r}
+chisqtestGC(table1)
+```
+```{r}
+fisher.test(table1)
+```
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.0000000000001098.
+
+## Discussion and Conclusion
+
+The tests performed brings to the conclusion that the vaccine is not very effective in treating COVID-19 in male patients. The p value of 0.0000000000001098 is such a small amount that the null hypothesis is rejected. The p value from the fisher test shows to be 0.00000000000004613. Therefore this shows that there is a difference in covid-19 effectiveness in males. 
+
+
+
+
+
+## Females
+$H(O)$ : The vaccine is not effective in preventing COVID-19 in females.
+
+$H(A)$ : The vaccine is effective in treating COVID-19 in females.
+
+The following data is used as a clinical test. The finalized data was provided by Proffessor Brownlow. 
+
+## Methods
+
+The response methods that is used in this is Cat~Cat. Following data is based off from the final data given. The numerical results, bar chart will be refereed to as well. 
+
+
+##Results
+
+```{r}
+femaledata = filter (FinalData, sex == "F")
+```
+
+## Graphical results
+
+```{r}
+barchartGC(~infected+treatment,data=femaledata)
+```
+```{r}
+barchartGC(~infected+treatment, data=,femaledata, type="percent")
+```
+According to the graph, from the females who had COVID-19, statistics show that 40% of them who were vaccinated had symptoms of covid and approximately 60 perecent of the placebo females had symptoms as well. Graph provides evidence of the slight difference in females compared between vaccinated and non vaccinated individuals. There was almost no different between them. 
+
+## Numerical results
+
+```{r}
+table2 <- xtabs(~infected + treatment, data=femaledata)
+rowPerc(table2)
+```
+```{r}
+colPerc(table2)
+```
+The following numerical data provides the females that got Covid-19. From the data of the ones not vaccinated, 60 percent of the females felt symptoms, compared to the 40% females who were vaccinated who felt symptoms. Based on the data, the females from the placebo group, only 2.04 percent of them were infected in covid-19, while 1.37 percent of the females who were vaccinated were infected with covid 19.
+
+## Inferencial results
+
+```{r}
+chisq.test(table2)
+```
+```{r}
+chisqtestGC(table2)
+```
+```{r}
+fisher.test(table2)
+```
+
+According to the chisq-test, the p value is determined to be a small amount, therefore the null hypothesis is rejected. The p value is 0.0002732
+
+## Discussion and Conclusion
+
+The tests performed brings to the conclusion that the vaccine is not very effective in treating COVID-19 in female patients. The p value of 0.0002732 is such a small amount that the null hypothesis is rejected. The p value from the fisher test shows to be 0.0002162 Therefore this shows that there is a difference in covid-19 effectiveness in females. 
 
 ## LGBTQ
 
