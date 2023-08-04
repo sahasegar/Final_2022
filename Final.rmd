@@ -280,3 +280,20 @@ According to the chisq-test, the p value is determined to be a small amount, the
 
 
 # Overall Results and Conclusions
+
+To conclude this study, the various subgroups affects the effectiveness of COVID-19 vaccines. 
+
+The tests performed brings to the conclusion that the vaccine is not very effective in treating COVID-19 in male patients. The p value of 0.0000000000001098 is such a small amount that the null hypothesis is rejected. The p value from the fisher test shows to be 0.00000000000004613. Therefore this shows that there is a difference in covid-19 effectiveness in males. 
+  Next, the tests performed brings to the conclusion that the vaccine is not very effective in treating COVID-19 in female patients. The p value of 0.0002732 is such a small amount that the null hypothesis is rejected. The p value from the fisher test shows to be 0.0002162 Therefore this shows that there is a difference in covid-19 effectiveness in the female subgroup. When compared between female and male subgroups, women's percentage was lesser in placebo and infection of COVID-19 by about 0.51 percent and 0.22 percent. Even though the numerical wise, the difference does not determine to be a lot, the female subgroup still felt less symptoms with the COVID-19 vaccine.  
+  Another subgroup researched is the LGBTQ subgroup. Based on the tests runned, the COVID-19 vaccine does have an effect in the LGBTQ, but not in a good way. The LGBTQ who recieved the COVID-19 vaccine got it, experience higher symptoms than the ones who got the placebo. The LGBTQ members thaqt did not get COVID nor get vaccinated showed no difference compared to the other. The ones who recieved the placebo had infection rate of 0.66% compared to the ones who recieved the vaccine that has a infection rate of 3.54 percent. This is higher amount of different, therefore null hypothesis is rejected due to it's great effect. 
+  Lastly, a good comparison of results to the LGBTQ subgroup is the drug users group. The COVID 19 vaccine did have an effect, however not a positive one in the ones that got the vaccine and were infected by COVID 19 with the infection rate of 3.06 percent. The placebo group had an approximate infection rate of 0.4 percent, showing a higher amount of difference between the two, therefore, rejecting the null hypothesis. 
+  To conclude all the subgroups, The LGBTQ subgroup had the worst results, while the female subgroup contracted the best results. Males were pretty similar in data to the females and drug users were similar in data compared to the LGBTQ subgroups. 
+ Therefore,this study shows that the COVID-19 vaccine would significantly benefit the males and females more, compared to LGBTQ members and drug users.
+
+
+
+
+
+
+
+
